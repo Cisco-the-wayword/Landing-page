@@ -24,7 +24,7 @@ body {
 .header {
   width: 100%;
   background-size: cover;
-  background-image: url("../images/background/hero.png");
+  background-image: url("../images/head.jpg");
   padding-bottom: 30%;
   transition: all 0.3s ease;
 }
@@ -74,6 +74,7 @@ body {
   margin-top: 0;
   margin-left: 10px;
   width: 60%;
+  margin-bottom: 10px;
 }
 
 .description {
@@ -197,7 +198,6 @@ body {
 
 .speakers .section-title {
   color: #272a31;
-  margin-top: 3%;
 }
 
 .speakers {
@@ -345,7 +345,7 @@ footer {
   }
 
   .logo {
-    font-size: 32px;
+    font-size: 60px;
     -webkit-text-fill-color: transparent;
     transition: all 3.3s ease;
   }
@@ -353,6 +353,8 @@ footer {
   .tool-bar-item {
     color: #fff;
     cursor: pointer;
+    width: 30px;
+    height: 30px;
   }
 
   .last-item {
@@ -364,6 +366,8 @@ footer {
     background-color: #fff;
     display: flex;
     justify-content: space-evenly;
+    position: fixed;
+    z-index: 9999;
   }
 
   .nav-logo {
@@ -440,7 +444,7 @@ footer {
 
   .program-content {
     flex-direction: column;
-    margin: 2px;
+    margin: 40px;
     width: 12%;
     padding: 2%;
     text-align: center;
@@ -516,7 +520,6 @@ footer {
   }
 
   footer {
-    margin-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -554,9 +557,10 @@ footer {
     align-items: center;
   }
 
-  .copy-rights img {
-    height: 5%;
-    width: 5%;
+  .footer-logo {
+    height: 10%;
+    width: 10%;
+    margin-top: 30px;
   }
 
   .partner hr {
@@ -566,13 +570,14 @@ footer {
 }
 
 .gallery {
-  margin-top: 20px;
   background: #272a31;
 }
 
 .section-title {
   font-size: 24px;
   font-weight: bold;
+  padding-top: 70px;
+  padding-bottom: 50px;
 }
 
 .section-line {
@@ -604,3 +609,7 @@ footer {
 }
 
 /* Add any additional styling as needed */
+.copyrights {
+  text-align: center;
+  justify-content: center;
+}
