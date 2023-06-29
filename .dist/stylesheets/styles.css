@@ -364,11 +364,12 @@ footer {
 
   .navbar {
     width: 100%;
-    background-color: black;
+    background-color: #1F1A17;
     display: flex;
     justify-content: space-evenly;
     position: fixed;
     z-index: 9999;
+    padding-top: 20px;
   }
 
   .nav-logo {
@@ -379,7 +380,7 @@ footer {
   }
 
   .nav-logo img {
-    width: 25%;
+    width: 30%;
   }
 
   .nav-list {
@@ -407,10 +408,10 @@ footer {
     border: #ec5242;
     border-style: solid;
     border-width: 2px;
-    padding: 8px 5px 8px 5px;
+    padding: 6px 5px;
     color: #ec5242;
     cursor: pointer;
-    height: 50px;
+    height: 40px;
     width: 80px;
     justify-content: center;
   }
@@ -601,7 +602,8 @@ footer {
 .gallery-item {
   width: 100%;
   height: 0;
-  padding-bottom: 66.67%; /* 3:2 aspect ratio */
+  padding-bottom: 66.67%;
+  /* 3:2 aspect ratio */
   position: relative;
   background: #fff;
 }
