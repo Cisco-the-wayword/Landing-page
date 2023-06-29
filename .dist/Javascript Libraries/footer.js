@@ -18,6 +18,14 @@ form.addEventListener('submit', (event) => {
   } else {
     messageError.style.display = 'none';
   }
+
+  // Clear input values after a short delay
+  if (!event.defaultPrevented) {
+    setTimeout(() => {
+      nameInput.value = '';
+      messageInput.value = '';
+    }, 500); // Adjust the delay as needed (in milliseconds)
+  }
 });
 
 form.addEventListener('input', () => {
@@ -29,6 +37,7 @@ form.addEventListener('input', () => {
     messageError.style.display = 'none';
   }
 });
+
 
 
 
