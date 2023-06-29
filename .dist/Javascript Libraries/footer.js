@@ -1,41 +1,34 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const form = document.querySelector('#formspree');
-  const errorEmail = document.querySelector('#email_error');
+const form = document.querySelector('#formspree');
+const nameInput = document.getElementById('name');
+const messageInput = document.getElementById('message');
+const nameError = document.getElementById('name_error');
+const messageError = document.getElementById('message_error');
 
-  function validateEmail(input) {
-    const emailRegex = /^[a-z_\-0-9.*#$!~%^&-+?|]+@+[a-z\-0-9]+(.com)$/gm;
-    return emailRegex.test(input);
+form.addEventListener('submit', (event) => {
+  if (nameInput.value.trim() === '') {
+    nameError.style.display = 'block';
+    event.preventDefault();
+  } else {
+    nameError.style.display = 'none';
   }
 
-  form.addEventListener('submit', (event) => {
-    event.preventDefault(); // Prevent default form submission
-
-    const emailValid = validateEmail(form.elements.email.value);
-    if (!emailValid) {
-      errorEmail.style.display = 'block';
-    } else {
-      errorEmail.style.display = 'none';
-
-      // Perform AJAX form submission
-      const formData = new FormData(form);
-      const xhr = new XMLHttpRequest();
-      xhr.open(form.method, form.action);
-      xhr.setRequestHeader('Accept', 'application/json');
-      xhr.onreadystatechange = function () {
-        if (xhr.readyState !== XMLHttpRequest.DONE) return;
-        if (xhr.status === 200) {
-          // Form submission successful
-          console.log('Form submitted successfully');
-        } else {
-          // Form submission failed
-          console.error('Form submission failed');
-        }
-      };
-      xhr.send(formData);
-    }
-  });
+  if (messageInput.value.trim() === '') {
+    messageError.style.display = 'block';
+    event.preventDefault();
+  } else {
+    messageError.style.display = 'none';
+  }
 });
 
+form.addEventListener('input', () => {
+  if (nameInput.value.trim() !== '') {
+    nameError.style.display = 'none';
+  }
+
+  if (messageInput.value.trim() !== '') {
+    messageError.style.display = 'none';
+  }
+});
 
 
 
@@ -84,7 +77,7 @@ function renderFooter() {
   />
     </div>
     <p class="copyrights">
-      2022 TPPS Conference, April. <br />
+      IMPACT 2023, April. <br />
       All Rights Reserved.
     </p>
   </article>`;
