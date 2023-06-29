@@ -1,24 +1,10 @@
 const topBar = document.querySelector('.desktop-bar');
 function renderTopBar() {
-  topBar.innerHTML = `<div class="tool-bar">
-  <img
-    class="tool-bar-item"
-    src="images/social/facebook.svg"
-    alt="facebook-icon"
-  />
-  <img
-    class="tool-bar-item"
-    src="images/social/twitter.svg"
-    alt="twitter-icon"
-  />
-  <p class="tool-bar-item">English</p>
-  <p class="tool-bar-item">My Page</p>
-  <p class="tool-bar-item last-item">Logout</p>
-</div>
+  topBar.innerHTML = `
 <nav class="navbar">
   <div class="nav-logo">
-    <a href="index.html" class="logo-link"><img src="images/download.png" alt="TTPS Conference 2022" /></a>
-    <p>TPPS Conference 2022</p>
+    <a href="index.html" class="logo-link"><img src="images/impact_header.png" alt="IMPACT 2023 logo" /></a>
+    <p>IMPACT 2023</p>
   </div>
   <ul class="nav-list">
     <li class="nav-item">
@@ -29,7 +15,7 @@ function renderTopBar() {
     <li class="nav-item">Sponsor</li>
     <li class="nav-item">News</li>
   </ul>
-  <p class="cc-campaign">TPPS Conference</p>
+  <p class="cc-campaign">Register</p>
 </nav>`;
 }
 window.onload = renderTopBar();
